@@ -15,6 +15,6 @@ set -x
 git tag $1
 git push
 git push --tags
-docker build -t avakhov/prometheus:$1 .
+docker build --platform linux/amd64 -t avakhov/prometheus:$1 .
 docker push avakhov/prometheus:$1
 echo done.
